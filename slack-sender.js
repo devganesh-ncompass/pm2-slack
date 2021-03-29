@@ -131,7 +131,7 @@ function convertMessagesToSlackAttachments(messages) {
             color = redColor;
         }
 
-        var title = `${message.name} ${message.event}`;
+        var title = `${os.hostname()} : ${message.name} ${message.event}`;
         var description = (message.description || '').trim();
         var fallbackText = title + (description ? ': ' + description.replace(/[\r\n]+/g, ', ') : '');
         slackAttachments.push({
